@@ -401,20 +401,90 @@
     }
 }
 
-.articals {
+// .articals {
+//     background: url('../Images/article-banner.jpg');
+//     background-position: center center;
+//     height: 130vh;
+//     color: #fff;
+//     text-align: center;
+//     display: grid;
+//     place-items: center;
+//     font-family: "Be Vietnam Pro", sans-serif;
+//     position: relative;
+
+//     & .artical__area {
+//         position: relative;
+//         z-index: 10;
+
+//         & h3 {
+//             font-size: 50px;
+//             font-weight: 600;
+//             line-height: 80px;
+//             text-align: left;
+//             text-transform: uppercase;
+//         }
+
+//         & h2 {
+//             text-transform: uppercase;
+//             font-size: 100px;
+//             font-weight: 600;
+//             line-height: 80px;
+//             text-align: right;
+//             margin-left: 50px;
+//             color: #7FEBCB;
+//             margin-bottom: 30px;
+//         }
+//     }
+
+//     & .articals__button {
+//         border: 2px solid;
+//         border-image-source: linear-gradient(90deg, #6590FF 0%, #7FEBCB 100%);
+//         border-width: 1px;
+//         border-style: solid;
+//         border-image-slice: 1;
+//         border-image-repeat: stretch;
+//         padding: 10px 30px;
+//         text-decoration: none;
+//         color: #fff;
+//         font-weight: 600;
+//         position: relative;
+//         z-index: 11;
+
+//         & svg {
+//             margin-left: 20px;
+//             position: relative;
+//             z-index: 11;
+//         }
+//     }
+
+
+
+//     & .card__container {
+//         position: relative;
+//         text-align: left;
+//         transition: left 0.5s ease, top 0.5s ease;
+//         & p {
+//             margin-top: 20px;
+//         }
+//     }
+// }
+
+.articles {
+    font-family: "Be Vietnam Pro", sans-serif;
     background: url('../Images/article-banner.jpg');
     background-position: center center;
     height: 130vh;
     color: #fff;
-    text-align: center;
-    display: grid;
-    place-items: center;
-    font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 600;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    & .artical__area {
+    & .content__area {
         position: relative;
         z-index: 10;
+
 
         & h3 {
             font-size: 50px;
@@ -449,6 +519,9 @@
         font-weight: 600;
         position: relative;
         z-index: 11;
+        display: block;
+        width: fit-content;
+        margin: 20px auto;
 
         & svg {
             margin-left: 20px;
@@ -456,27 +529,100 @@
             z-index: 11;
         }
     }
+}
 
-    & #card1 {
-        left: 0;
-        top: 0;
-    }
+.testimonial-container {
+    text-align: center;
+    padding: 2rem;
+}
 
-    & #card2 {
-        right: 0;
-        top: 0;
-    }
+.testimonial-container img {
+    border-radius: 50%;
+}
 
-    & #card2 {
-        bottom: 0;
-    }
+.splide__arrow--prev,
+.splide__arrow--next {
+    position: relative;
+    color: #000;
+    background: transparent;
+    border: none;
+    // padding: 0.5rem 1rem;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-    & .card__container {
-        position: absolute;
+.splide__arrow--prev svg {
+    transform: scaleX(1);
+}
+
+.splide__arrow--prev {
+    left: 1rem;
+}
+
+.splide__arrow--next {
+    right: 1rem;
+}
+
+.testimonial__profile img {
+    height: 50px;
+}
+
+.testimonial__profile .active {
+    height: 80px;
+}
+
+blockquote {
+    font-weight: 600;
+}
+
+.blockquote-footer::before {
+    display: none;
+}
+
+footer {
+    background-color: #121423;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+
+    & p {
+        font-family: Poppins;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 27px;
         text-align: left;
-        transition: left 0.5s ease, top 0.5s ease;
-        & p {
-            margin-top: 20px;
-        }
+        color: #8B8B8B;
+        margin-top: 10px;
     }
+
+    & ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    & ul li {
+        color: #8B8B8B;
+        margin-bottom: 8px;
+    }
+
+    & h4 {
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: left;
+
+    }
+    & .social__list{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.footertop {
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+
+    background-color: #7FEBCB;
+    height: 50px;
 }

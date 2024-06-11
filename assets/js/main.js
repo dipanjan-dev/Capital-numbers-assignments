@@ -24,3 +24,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }).mount();
   });
+  document.addEventListener('DOMContentLoaded', function () {
+    var splide = new Splide('#testimonial-slider', {
+      type   : 'loop',
+      perPage: 1,
+      perMove: 1,
+      autoplay: true,
+      interval: 5000,
+      arrows: false, // Disable the default arrows
+      pagination: false,
+  }).mount();
+    document.querySelector('.splide__arrow--prev').addEventListener('click', function () {
+      splide.go('<');
+  });
+
+  document.querySelector('.splide__arrow--next').addEventListener('click', function () {
+      splide.go('>');
+  });
+});
